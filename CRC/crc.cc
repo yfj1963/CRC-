@@ -1,4 +1,69 @@
+struct PasswordMS
+{
+	int scoped;
+	int adjustCount;
+};
+struct PasswordState
+{
+    int lastDigitPos;
+	int lastLowerLetterPos;
+	int lasttouperLetterPos;
+	int currentScoped;
+	int len;
+	int needAdjustCount;
+	int dupCount;
+};
+void setCurrentState(char *c, PasswordState &currentState)
+{
+	if (isdigit(c))
+	{
+		currentState.lastDigitPos = i;
+	}
+	if (isupper(c))
+	{
+		currentState.lasttouperLetterPos = i;
+	}
+	if (islower(c))
+	{
+		currentState.lastLowerLetterPos = i;
+	}
+	if (i != 0)
+	{
+		if (c != preC)
+		{
 
+		}
+	}
+}
+void anlyzerSmallPasswordInfo(char *pd, int ms, int scoped, PasswordState &currentState, PasswordMS &passwordMS)
+{
+	int len = currentState.len;
+	for (int i = 0; i < len; ++i)
+	{
+		setCurrentState(pd[i], currentState);
+		
+    }
+}
+void anlyzerBigerPasswordInfo(char *pd, int ms, int scoped, PasswordMS &passwordMS)
+{
+
+}
+
+void anlyzerPasswordInfo(char *pd, int ms, int scoped)
+{
+	if (pd == nullptr)
+	{
+		return;
+	}
+	int len = strlen(pd);
+	PasswordState currentState;
+	currentState.currentScoped = scoped;
+	if (len < 6)
+	{
+
+	}
+
+}
 
 typedef  unsigned char BYTE;
 typedef unsigned long long QWORD;
